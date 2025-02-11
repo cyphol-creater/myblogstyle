@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>Hello, world!</title>
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		.row {
+			width: 100%;
+			height: 100%;
+		}
+
+		.menu {
+			width: 30px;
+			height: 2px;
+			background-color: black;
+			margin: 6px 0;
+		}
+
+		.sidenav a {
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 2rem;
+			color: black;
+			display: block;
+			border: none;
+			background: none;
+			width: 100%;
+			text-align: left;
+			cursor: pointer;
+			outline: none;
+			padding-bottom: 75px;
+			padding-right: 5px;
+		}
+
+		input {
+			margin-top: 2%;
+			padding: 1% 2%;
+			width: 100%;
+			border-radius: 10px;
+			background-color: #ededee;
+			color: black;
+			border: none;
+		}
+
+		.offer {
+			background-color: rgb(255, 123, 0);
+			padding: 40px;
+			border-radius: 5px;
+		}
+
+		.topnav {
+			overflow: hidden;
+			background-color: white;
+			border-bottom: 1px solid rgb(210, 210, 215);
+			min-width: 25%;
+			max-width: 100%;
+		}
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: #6e6e73;
+			text-align: center;
+			padding: 14px 20px;
+			text-decoration: none;
+			font-size: 17px;
+			border-bottom: 3px solid transparent;
+		}
+
+		.topnav a:hover {
+			color: #646468;
+		}
+
+		.topnav a.active {
+			border-bottom: 3px solid rgb(255, 123, 0);
+			color: rgb(255, 123, 0);
+		}
+
+		.topnav a:hover {
+			cursor: pointer;
+		}
+
+		.card {
+			border: none;
+			margin-bottom: 2%;
+		}
+
+		.inp {
+			background-color: transparent;
+			color: black;
+			border-bottom: 1px solid black;
+			border-radius: 0px;
+		}
+
+		#order-real div {
+			background-color: white;
+			padding: 20px;
+		}
+
+		#process {
+			display: none;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		ul li {
+			border: 1px solid green;
+			margin-top: -1px;
+			/* Prevent double borders */
+			background-color: greenyellow;
+			padding: 12px;
+			text-decoration: none;
+			font-size: 18px;
+			color: green;
+			display: none;
+			position: relative;
+		}
+
+		ul li:hover {
+			background-color: springgreen;
+		}
+
+		.close {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			right: 0%;
+			padding: 12px 16px;
+			transform: translate(0%, -50%);
+		}
+
+		#order-real img {
+			width: 100%;
+			height: 100%;
+		}
+
+		#price {
+			border-top: 1px solid black;
+			display: none;
+			padding-top: 2%;
+		}
+
+		#food-list {
+			display: none;
+		}
+
+		#python {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="row">
+
+		<div class="col-lg-9 col-md-6 col-sm-6">
+			<div style="margin-left: 2%;"><br>
+				<ul>
+					<li>Payment Successful<span class="close">&times;</span></li>
+				</ul>
+				<input placeholder="What would you like to eat?"><br><br>
+				<div class="offer">
+					<h1>30% off</h1>
+					<h2 style="color: white;">Combo Jumbotron Meal</h2><br>
+
+				</div>
+
+				<div class="topnav">
+					<a class="active" onclick="html()" id="nav-html">Regular Meals</a>
+					<a onclick="css()" id="nav-css">Top Rated</a>
+					<a onclick="js()" id="nav-js">Best Sellers</a>
+					<a onclick="kotlin()" id="nav-kotlin">Leave a rating</a>
+					<a onclick="python()" id="nav-python">Deserts</a>
+				</div><br>
+				<div id="html">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Enuo Special Burger</h5>
+									<p class="card-text">The Ultimate Meal</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="burger" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">French Fries</h5>
+									<p class="card-text">The favourite snack</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="fries" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Enuo Special Pizza</h5>
+									<p class="card-text">The trending trend</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="pizza" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://i2.wp.com/www.thegreenmaninn.fr/wp-content/uploads/2021/04/beer-burger-dish-drink.jpg?fit=910%2C607&ssl=1" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">The Jumbotron Meal</h5>
+									<p class="card-text">The meal to suffice you</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="jumbotron" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="http://maunikagowardhan.co.uk/wp-content/uploads/2011/11/Chilli-Paneer.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Paneer Chilli</h5>
+									<p class="card-text">From Indian Streets</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="paneer" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://www.vegrecipesofindia.com/wp-content/uploads/2018/12/white-sauce-pasta-recipe-1.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Penne Pasta</h5>
+									<p class="card-text">But not the least</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="pasta" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><br>
+						<button class="btn btn-primary btn-lg" id="add-all" style="margin: auto;">Add all</button><br>
+					</div>
+				</div>
+
+				<div id="python">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Tart</h5>
+									<p class="card-text">The Ultimate Meal</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="burger" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">French Fries</h5>
+									<p class="card-text">The favourite snack</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="fries" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Enuo Special Pizza</h5>
+									<p class="card-text">The trending trend</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="pizza" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://i2.wp.com/www.thegreenmaninn.fr/wp-content/uploads/2021/04/beer-burger-dish-drink.jpg?fit=910%2C607&ssl=1" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">The Jumbotron Meal</h5>
+									<p class="card-text">The meal to suffice you</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="jumbotron" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="http://maunikagowardhan.co.uk/wp-content/uploads/2011/11/Chilli-Paneer.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Paneer Chilli</h5>
+									<p class="card-text">From Indian Streets</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="paneer" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card" style="width: 18rem;">
+								<img src="https://www.vegrecipesofindia.com/wp-content/uploads/2018/12/white-sauce-pasta-recipe-1.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Penne Pasta</h5>
+									<p class="card-text">But not the least</p>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<input placeholder="Quantity" class="inp" id="pasta" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><br>
+						<button class="btn btn-primary btn-lg" id="add-all" style="margin: auto; margin-bottom: 2%;">Add all</button><br><br>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6" style=" background-color: #ededee;">
+			<div style="padding: 5% 5%;">
+				<h2>My Orders</h2><br>
+				<h3 id="food-list">Food list</h3>
+				<div id="order-real">
+				</div>
+
+				<br>
+				<p id="price"></p><br>
+				<button class="btn btn-primary" id="process">Process Payment</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+		let order = []
+		const prices = [
+			1000000000000000000000000000000000000000000000,
+			1000000000000,
+			1000000000000,
+			1000000000000000000,
+			1000000000,
+			1000000000
+		]
+		const menu = [
+			"Enuo Special Burger",
+			"French Fries",
+			"Enuo Special Pizza",
+			"The Jumbotron Meal",
+			"Paneer Chilli",
+			"Penne Pasta"
+		]
+		const images = [
+			"https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+			"https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+			"https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+			"https://i2.wp.com/www.thegreenmaninn.fr/wp-content/uploads/2021/04/beer-burger-dish-drink.jpg?fit=910%2C607&ssl=1",
+			"http://maunikagowardhan.co.uk/wp-content/uploads/2011/11/Chilli-Paneer.jpg",
+			"https://www.vegrecipesofindia.com/wp-content/uploads/2018/12/white-sauce-pasta-recipe-1.jpg"
+		]
+		let balance = 0
+		document.getElementById("add-all").addEventListener("click", function() {
+			order = []
+			pushToOrder()
+			getPrice()
+			document.getElementById("price").innerHTML = `Price: ${balance}`
+			generateDOM()
+			document.getElementById("process").style.display = "block";
+			localStorageHandler()
+			document.getElementById("price").style.display = "block";
+			document.getElementById("food-list").style.display = "block";
+		})
+
+		function pushToOrder() {
+			order.push(Number(document.getElementById("burger").value))
+			order.push(Number(document.getElementById("fries").value))
+			order.push(Number(document.getElementById("pizza").value))
+			order.push(Number(document.getElementById("jumbotron").value))
+			order.push(Number(document.getElementById("paneer").value))
+			order.push(Number(document.getElementById("pasta").value))
+		}
+
+		function getPrice() {
+			order.forEach(function(item) {
+				ind = order.indexOf(item)
+				balance += order[ind] * prices[ind]
+			})
+		}
+
+		function generateDOM() {
+			order.forEach(function(item) {
+				if (item !== 0) {
+					let div = document.createElement("div")
+					let img = document.createElement("img")
+					div.textContent = item + ` - ${menu[order.indexOf(item)]}`
+					img.setAttribute("src", `${images[order.indexOf(item)]}`)
+					document.getElementById("order-real").appendChild(img)
+					document.getElementById("order-real").appendChild(div)
+				}
+			})
+		}
+
+		function localStorageHandler() {
+			//Handles localStorage
+			if (!typeof(localStorage.balance)) {
+				localStorage.setItem("balance", 0)
+			}
+			localStorage.balance += balance
+			console.log(localStorage.balance)
+		}
+		// Closable ul
+		document.getElementById("process").addEventListener("click", function() {
+			document.querySelector("ul").style.display = "block"
+			document.querySelector("li").style.display = "block"
+		})
+		var closebtns = document.getElementsByClassName("close");
+		var i;
+		for (i = 0; i < closebtns.length; i++) {
+			closebtns[i].addEventListener("click", function() {
+				this.parentElement.style.display = 'none';
+			});
+		}
+		// Clear
+		document.addEventListener("keydown", function(e) {
+			if (e.key === ".") {
+				if (confirm("Do you want to clear?")) {
+					location.reload()
+				}
+			}
+		})
+
+		function html() {
+			document.getElementById("nav-html").classList.add("active");
+			document.getElementById("nav-css").classList.remove("active");
+			document.getElementById("nav-js").classList.remove("active");
+			document.getElementById("nav-kotlin").classList.remove("active");
+			document.getElementById("nav-python").classList.remove("active");
+			document.getElementById("html").style.display = "block";
+			document.getElementById("css").style.display = "none";
+			document.getElementById("js").style.display = "none";
+			document.getElementById("kotlin").style.display = "none";
+			document.getElementById("python").style.display = "none";
+		}
+
+		function css() {
+			document.getElementById("nav-html").classList.remove("active");
+			document.getElementById("nav-css").classList.add("active");
+			document.getElementById("nav-js").classList.remove("active");
+			document.getElementById("nav-kotlin").classList.remove("active");
+			document.getElementById("nav-python").classList.remove("active");
+			document.getElementById("html").style.display = "none";
+			document.getElementById("css").style.display = "block";
+			document.getElementById("js").style.display = "none";
+			document.getElementById("kotlin").style.display = "none";
+			document.getElementById("python").style.display = "none";
+		}
+
+		function js() {
+			document.getElementById("nav-html").classList.remove("active");
+			document.getElementById("nav-css").classList.remove("active");
+			document.getElementById("nav-js").classList.add("active");
+			document.getElementById("nav-kotlin").classList.remove("active");
+			document.getElementById("nav-python").classList.remove("active");
+			document.getElementById("html").style.display = "none";
+			document.getElementById("css").style.display = "none";
+			document.getElementById("js").style.display = "block";
+			document.getElementById("kotlin").style.display = "none";
+			document.getElementById("python").style.display = "none";
+		}
+
+		function kotlin() {
+			document.getElementById("nav-html").classList.remove("active");
+			document.getElementById("nav-css").classList.remove("active");
+			document.getElementById("nav-js").classList.remove("active");
+			document.getElementById("nav-kotlin").classList.add("active");
+			document.getElementById("nav-python").classList.remove("active");
+			document.getElementById("html").style.display = "none";
+			document.getElementById("css").style.display = "none";
+			document.getElementById("js").style.display = "none";
+			document.getElementById("kotlin").style.display = "block";
+			document.getElementById("python").style.display = "none";
+		}
+
+		function python() {
+			document.getElementById("nav-html").classList.remove("active");
+			document.getElementById("nav-css").classList.remove("active");
+			document.getElementById("nav-js").classList.remove("active");
+			document.getElementById("nav-kotlin").classList.remove("active");
+			document.getElementById("nav-python").classList.add("active");
+			document.getElementById("html").style.display = "none";
+			document.getElementById("css").style.display = "none";
+			document.getElementById("js").style.display = "none";
+			document.getElementById("kotlin").style.display = "none";
+			document.getElementById("python").style.display = "block";
+		}
+	</script>
+</body>
+
+</html>
